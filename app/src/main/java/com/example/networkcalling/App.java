@@ -1,5 +1,6 @@
 package com.example.networkcalling;
 
+import com.example.networkcalling.di.ApiServiceModule;
 import com.example.networkcalling.di.AppModule;
 import com.example.networkcalling.di.NetworkModule;
 import com.example.networkcalling.di.RepositoryModule;
@@ -17,7 +18,8 @@ public class App extends android.app.Application {
         appScope.installModules(
                 new AppModule(getApplicationContext()),
                 new RepositoryModule(),
-                new NetworkModule()
+                new NetworkModule(),
+                new ApiServiceModule()
         );
     }
 
